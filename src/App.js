@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import IncidentList from './Containers/IncidentList'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { connect } from 'react-redux'
+import { getIncidents } from './Redux/actions.js'
+
+class App extends Component {
+  componentDidMount() {
+    this.props.getIncidents()
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <IncidentList incidents={this.props.incidents}/>
+      </div>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    incidents: state.incidents
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getIncidents: () => dispatch(getIncidents())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
