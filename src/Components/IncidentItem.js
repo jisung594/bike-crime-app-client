@@ -1,14 +1,15 @@
 import React from 'react';
+import '../stylesheets/IncidentItem.css'
 
 const IncidentItem = (props) => {
   let { incident } = props;
 
   return (
-    <div>
-      <h1>{incident.title}</h1>
-      <h4>{incident.description}</h4>
-      <h4>{incident.address}</h4>
-      <h4>{incident.occurred_at}</h4>
+    <div className="incident-item">
+      <h3>{incident.title}</h3>
+      <p>{incident.description}</p>
+      <p>{incident.address}</p>
+      <p>{incident.occurred_at}</p>
     </div>
   )
 }

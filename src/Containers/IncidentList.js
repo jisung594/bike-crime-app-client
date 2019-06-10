@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import IncidentItem from '../Components/IncidentItem'
+import '../stylesheets/App.css'
 // import { connect } from 'react-redux'
 // import { getIncidents } from '../Redux/actions.js'
 
@@ -18,6 +19,7 @@ class IncidentList extends Component {
 
     return (
       <div className="incidents-list">
+        <h2 className="page-header">REPORT INDEX</h2>
         {incidentsList}
       </div>
     )

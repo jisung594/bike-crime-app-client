@@ -1,3 +1,11 @@
 .homepage {
   background-color: gray;
+  height: 100vh;
+}
+
+.homepage h1 {
+  font-family: 'Righteous', cursive;
+  font-size: 24vw;
+  margin: 0;
+  line-height: 12vh;
 }
