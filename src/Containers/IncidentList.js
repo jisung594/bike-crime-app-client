@@ -20,6 +20,12 @@ class IncidentList extends Component {
     return (
       <div className="incidents-list">
         <h2 className="page-header">REPORT INDEX</h2>
+        <input placeholder="Search"></input>
+        <select>
+          <option>Keyword</option>
+          <option>Zipcode</option>
+          <option>Type</option>
+        </select>
         {incidentsList}
       </div>
     )

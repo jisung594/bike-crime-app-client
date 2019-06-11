@@ -1,6 +1,28 @@
-.incident-item h3 {
-  font-family: 'Comfortaa', cursive;
-  font-size: 6vw;
-  margin: 0;
-  /* line-height: 12vh; */
+@media only screen
+  and (min-device-width : 375px)
+  and (max-device-width : 667px)
+  and (orientation : portrait) {
+
+  .incident-item {
+    padding: 10px;
+  }
+
+  .incident-item h3 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 5vw;
+    margin: 5px 5px 5px 5px;
+    /* line-height: 12vh; */
+  }
+
+  .incident-item p {
+    font-family: 'Comfortaa', cursive;
+    font-size: 3vw;
+    margin: 5px 5px 5px 5px;
+  }
+
+  .incident-item img {
+    width: 100%;
+    margin: 5px 5px 5px 5px;
+  }
+  
 }

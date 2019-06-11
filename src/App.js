@@ -31,6 +31,7 @@ class App extends Component {
                   return <IncidentList incidents={this.props.incidents}/>
                 }} />
               </Switch>
+
             </div>
 
           </div>

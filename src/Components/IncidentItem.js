@@ -7,6 +7,7 @@ const IncidentItem = (props) => {
   return (
     <div className="incident-item">
       <h3>{incident.title}</h3>
+      <img src={incident.image} alt="missing-img"/>
       <p>{incident.description}</p>
       <p>{incident.address}</p>
       <p>{incident.occurred_at}</p>
